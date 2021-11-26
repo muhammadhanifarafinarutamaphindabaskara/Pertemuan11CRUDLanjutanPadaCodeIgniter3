@@ -212,7 +212,7 @@ class Home extends CI_Controller
           'password'       => $password,
           'jurusan'       => $jurusan,
           'gender'       => $gender,
-          'data'       => json_encode(implode(",",$data)),
+          'data'       => $data,
           'content'       => $content,
         );
         // hapus foto pada direktori
