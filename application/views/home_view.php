@@ -45,7 +45,7 @@
               <p>Hobi : <?php echo $data->data ?></p>
               <p>
                 <a href="<?=base_url()?>index.php/home/edit/<?=$data->id?>" class="btn btn-info" role="button">Edit</a>
-                <a href="<?=base_url()?>index.php/home/deletedata/<?=$data->id?>/<?=$data->foto?>" class="btn btn-danger" role="button">Hapus</a>
+                <a href="<?=base_url()?>index.php/home/deletedata/<?=$data->id?>/<?=$data->foto?>" class="btn btn-danger" role="button" onclick="return confirm('Yakin Ingin Hapus?')">Hapus</a>
               </p>
             </div>
           </div>
