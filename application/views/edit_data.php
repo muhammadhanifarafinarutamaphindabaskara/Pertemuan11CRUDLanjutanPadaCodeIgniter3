@@ -62,10 +62,11 @@
         <textarea name="content" id="content"><?= $data->content ?>"</textarea><br><br>
         <label>Foto</label><br>
         <input type="file" name="fotopost"><br>
+        <?php $update_data = explode(",",$data->data); ?>
         <label>Hobi</label><br>
-        <input type="checkbox" name="data" value="Membaca" <?php if($data->data == 'Membaca') echo 'checked'?>> Membaca<br>
-        <input type="checkbox" name="data" value="Sepak Bola" <?php if($data->data == 'Sepak Bola') echo 'checked'?>> Sepak Bola<br>
-        <input type="checkbox" name="data" value="Programming" <?php if($data->data == 'Programming') echo 'checked'?>> Programming<br>
+        <input type="checkbox" name="data[]" value="Membaca" <?php in_array ('Membaca', $update_data) ? print "checked" : ""; ?>> Membaca<br>
+        <input type="checkbox" name="data[]" value="Sepak Bola" <?php in_array ('Sepak Bola', $update_data) ? print "checked" : ""; ?>> Sepak Bola<br>
+        <input type="checkbox" name="data[]" value="Programming" <?php in_array ('Programming', $update_data) ? print "checked" : ""; ?>> Programming<br>
         <br><br>
 
         <!-- file lama -->
