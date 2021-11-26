@@ -91,6 +91,7 @@ class Home extends CI_Controller
     $this->form_validation->set_rules('password', 'Password', 'required|min_length[8]|max_length[255]');
     $this->form_validation->set_rules('jurusan', 'Jurusan', 'required');
     $this->form_validation->set_rules('gender', 'Jenis Kelamin', 'required');
+    
     $this->form_validation->set_rules('content', 'Validasi', 'required');
 
     if ($this->form_validation->run() == true) {
@@ -211,7 +212,7 @@ class Home extends CI_Controller
           'password'       => $password,
           'jurusan'       => $jurusan,
           'gender'       => $gender,
-          'data'       => $data,
+          'data'       => json_encode(implode(",",$data)),
           'content'       => $content,
         );
         // hapus foto pada direktori
